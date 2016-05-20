@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="portfolio site" />
+	<meta name="keywords" content="portfolio, site, dev, slicing" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<title>js</title>
+</head>
+<body>
+	<div class="container">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+		<button id="search-trysu" class="btn btn-primary" onclick="">Price trysu</button>
+		<p >Trysu price <span></span>grn</p>
+	</div>
+	<script type="text/javascript">
+
+
+		var module = (function() {
+			var products = [
+				{
+					name: "trysu",
+					size: "M",
+					price: 20
+				}, {
+					name: "mayka",
+					size: "L",
+					price: 100
+				}, {
+					name: "sox",
+					size: 40,
+					price: 20
+				}
+			];
+
+			var SearchByName = function(name) {
+				var result = [];
+				for (var i = 0; i < products.length; ++i ) {
+					if (products[i].name == name) {
+						result.push(products[i]);
+					}
+				}
+				return result;
+			};
+
+			var SearchBySize = function(size) {
+				var result = [];
+				for (var i = 0; i < products.length; ++i ) {
+					if (products[i].size == size) {
+						result.push(products[i]);
+					}
+				}
+				return result;
+			};
+
+			var SearchByPrice = function(price) {
+				var result = [];
+				for (var i = 0; i < products.length; ++i ) {
+					if (products[i].price == price) {
+						result.push(products[i]);
+					}
+				}
+				return result;
+			};
+
+			return {
+				SearchByName: SearchByName,
+				SearchBySize: SearchBySize,
+				SearchByPrice: SearchByPrice
+			};
+		}) ();
+
+		var trysuVal= module.SearchByName("sox");
+
+		function searchTrysu () {
+			$("#search-trysu").val(a);
+		}
+
+	</script>
+</body>
+</html>

@@ -31,24 +31,32 @@
 			// document.write(summa);
 
 			// Example 4
-			// var arr = [];
-			// var num = 0;
-			// var x1 = 0, 
-			// 		x2 = 0,
-			// 		x3 = 0;
-			// while (num = Number(prompt("Enter numbers"))) {
-			// 	if (num === "q") {
-			// 		arr.push(num);
-			// 	}
-			// }
-			// for (var i = 0; i < arr.length; ++i) {
-			// 	if (arr[i] < 0) ++x1;
-			// 	if (arr[i] > 0) ++x2;
-			// 	if (arr[i] == 0) ++x3;
-			// }
-			// document.write(x1 + "<0" + x2 + ">0" + x3 + "=0");
+			var arr = [];
+			var num = 0;
+			var x1 = 0, 
+					x2 = 0,
+					x3 = 0;
+			while (num = Number(prompt("Enter numbers"))) {
+				if (num === "q") {
+					break;
+				}
+				arr.push(num);
+			}
+			for (var i = 0; i < arr.length; ++i) {
+				if (arr[i] < 0) ++x1;
+				if (arr[i] > 0) ++x2;
+				if (arr[i] == 0) ++x3;
+			}
+			document.write(x1 +  "<0   " + x2 + ">0   " + x3 + "=0  ");
 
 			// Example 5
+			// function convertUnits (koeficient, units) {
+			// 	var arr = [];
+			// 	for (var i = 1; i < 10; ++i) {
+
+			// 	}
+
+			// }
 
 
 	</script>
