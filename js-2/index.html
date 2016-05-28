@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="portfolio site" />
+	<meta name="keywords" content="portfolio, site, dev, slicing" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<title>js</title>
+</head>
+<body>
+	<div class="container">
+		
+	</div>
+	<script type="text/javascript">
+
+	var module = (function() {
+	 		var moduleItem = [
+		 		{
+		 			name: "Andriy",
+		 			age: 30,
+		 			city: "Rivne"
+		 		}, {
+		 			name: "Slava",
+		 			age: 25,
+		 			city: "Lviv"
+		 		}, {
+		 			name: "Tolik",
+		 			age: 35,
+		 			city: "Kuiv"
+		 		}, {
+		 			name: "Evgen",
+		 			age: 20,
+		 			city: "Ternopil"
+		 		}, {
+		 			name: "Max",
+		 			age: 31,
+		 			city: "Zdolbyniv"
+		 		}, {
+		 			name: "Sasha",
+		 			age: 28,
+		 			city: "Chernigiv"
+		 		}, {
+		 			name: "Olga",
+		 			age: 29,
+		 			city: "Yzgorog"
+		 		},  {
+		 			name: "Sasha",
+		 			age: 28,
+		 			city: "Shernigiv"
+		 		}, {
+		 			name: "Sveta",
+		 			age: 33,
+		 			city: "Zhutomur"
+		 		}, {
+		 			name: "Lena",
+		 			age: 21,
+		 			city: "Vinnutsia"
+		 		},  {
+		 			name: "Oleksiy",
+		 			age: 26,
+		 			city: "Lytsk"
+		 		}, {
+		 			name: "Tanja",
+		 			age: 41,
+		 			city: "Ruga"
+		 		}
+	 		];
+
+	 		var GetName = function(Name) {
+	 			var resultName = [];
+	 			for (var i = 0; i < moduleItem.length; ++i){
+	 				if (moduleItem[i].name == Name) {
+						resultName.push(moduleItem[i]);
+					}
+	 			}
+	 			return resultName;
+	 			// console.log(resultName);
+	 		};
+
+	 		var GetAge = function(Age) {
+	 			var resultAge = [];
+	 			for (var i = 0; i < moduleItem.length; ++i){
+	 				if (moduleItem[i].age == Age) {
+						resultAge.push(moduleItem[i]);
+					}
+	 			}
+	 			return resultAge;
+	 			// console.log(resultAge);
+	 		};
+
+	 		var GetCity = function(City) {
+	 			var resultCity = [];
+	 			for (var i = 0; i < moduleItem.length; ++i){
+	 				if (moduleItem[i].city == City) {
+						resultCity.push(moduleItem[i]);
+					}
+	 			}
+	 			return resultCity;
+	 			// console.log(resultCity);
+	 		};
+	 		
+ 			return {
+ 				GetName: GetName,
+ 				GetAge:  GetAge,
+ 				GetCity: GetCity
+ 			};
+	 }) ();
+	</script>
+</body>
+</html>
