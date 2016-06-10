@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="portfolio site" />
+	<meta name="keywords" content="portfolio, site, dev, slicing" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<title>js</title>
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Object</h3>
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<label>Name</label>
+					<input id="input_1" class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label>Size</label>
+					<input id="input_2" class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label>Price</label>
+					<input id="input_3" class="form-control" type="text">
+				</div>
+				<button id="submit" class="btn btn-primary" onclick="search()">Search</button>
+				<div id="result"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+
+		var module = (function() {
+			var products = [
+				{
+					name: "trysu",
+					size: "M",
+					price: 20
+				}, {
+					name: "mayka",
+					size: "L",
+					price: 100
+				}, {
+					name: "sox",
+					size: 40,
+					price: 20
+				}
+			];
+
+			var SearchByName = function(name) {
+				var result = [];
+				for (var i = 0; i < products.length; ++i ) {
+					if (products[i].name == name) {
+						result.push(products[i]);
+					}
+				}
+				return result;
+			};
+
+			var SearchBySize = function(size) {
+				var result = [];
+				for (var i = 0; i < products.length; ++i ) {
+					if (products[i].size == size) {
+						result.push(products[i]);
+					}
+				}
+				return result;
+			};
+
+			var SearchByPrice = function(price) {
+				var result = [];
+				for (var i = 0; i < products.length; ++i ) {
+					if (products[i].price == price) {
+						result.push(products[i]);
+					}
+				}
+				return result;
+			};
+
+			return {
+				SearchByName: SearchByName,
+				SearchBySize: SearchBySize,
+				SearchByPrice: SearchByPrice
+			};
+		}) ();
+
+		function search () {
+			var searchRes = [],
+					resText = " ",
+					name = $("#input_1").val(),
+					size = $("#input_2").val(),
+					price = $("#input_3").val();
+
+			// var searchName = module.SearchByName("trysu");
+			// var searchSize = module.SearchBySize("trysu");
+			// var searchPrice = module.SearchByPrice("trysu");
+
+			if (name) {
+				var searchName = module.SearchByName(name);
+			}
+
+			if (size) {
+				var searchSize = module.SearchBySize(size);
+			}
+
+			if (price) {
+				var searchPrice = module.SearchByPrice(price);
+			}
+
+			for (var i = 0; i < searchName.length; ++i) {
+					resText += searchName[i].name + searchSize[i].size + searchPrice[i].price;
+				}
+
+			$("#result").html(resText);
+		// console.log(resText);
+		}
+		
+
+	</script>
+</body>
+</html>
