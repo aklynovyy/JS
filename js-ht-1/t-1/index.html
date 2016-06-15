@@ -8,14 +8,98 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
 
 	<title>js</title>
 </head>
-<body>
-	<div class="container">
-		
+	<body>	
+	<div class="page-header">
+	  <div class="container">
+	  	<h1>Students Statistics</h1>
+			<div class="input-group">
+			  <input type="text" class="form-control" placeholder="Enter name" id="inputName">
+				<span class="input-group-btn">
+			  	<button type="button" class="btn btn-info" onclick="searchByName()">Search</button>
+			  </span>
+		  </div>
+		</div>
 	</div>
-	
+
+<div class="container">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-1" onclick="PrintFirstGroup()">First Group</button>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-2" onclick="PrintSecondGroup()">Second Group</button>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-3" onclick="PrintThirdGroup()">Third Group</button>
+	<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-4" onclick="PrintAllGroups()">All Groups</button>
+	<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-5" onclick="AllStatistic()">Statistic</button>		  
+  <div class="modal fade" id="modal-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">First Group</h4>
+        </div>
+        <div class="modal-body">
+          <div id="ResultFirst"></div>
+        </div>
+       </div>	      
+    </div>
+  </div>
+  <div class="modal fade" id="modal-2" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Second Group</h4>
+        </div>
+        <div class="modal-body">
+          <div id="ResultSecond"></div>
+        </div>
+       </div>	      
+    </div>
+  </div>
+  <div class="modal fade" id="modal-3" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Third Group</h4>
+        </div>
+        <div class="modal-body">
+          <div id="ResultThird"></div>
+        </div>
+       </div>	      
+    </div>
+  </div>	
+  <div class="modal fade" id="modal-4" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">All Groups</h4>
+        </div>
+        <div class="modal-body">
+          <div id="Result"></div>
+        </div>
+       </div>	      
+    </div>
+  </div> 
+  <div class="modal fade" id="modal-5" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Statistic</h4>
+        </div>
+        <div class="modal-body">
+          <div id="ResultStat"></div>
+        </div>
+       </div>	      
+    </div>
+  </div> 
+	<div id="ResultSearchByName"></div>		
+</div>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 var statMod = (function(){
 
-	var firstGroup = [
+	var FirstGroup = [
 		{
 			studName: "AndriyA",
 			subjects: [
@@ -204,7 +204,7 @@ var statMod = (function(){
 		} 
 	];
 
-	var secondGroup = [
+	var SecondGroup = [
 		{
 			studName: "AndriyN",
 			subjects: [
@@ -408,7 +408,7 @@ var statMod = (function(){
 		} 
 	];
 
-	var thirdGroup = [
+	var ThirdGroup = [
 		{
 			studName: "AndriyD",
 			subjects: [
@@ -611,4 +611,56 @@ var statMod = (function(){
 			]
 		} 
 	];
+
+	var GroupsArray = FirstGroup.concat(SecondGroup, ThirdGroup);
+
+	var searchByName = function(Name){		
+		var result = [];
+		for(var i = 0; i < GroupsArray.length; i++){
+			if(GroupsArray[i].studName == Name){				
+				result.push(GroupsArray[i]);
+			}
+		}
+		return result;
+	};
+
+	var PrintGroupsArray = function(){		
+		var result = [];
+		for(var i = 0; i < GroupsArray.length; i++){							
+			result.push(GroupsArray[i]);			
+		}
+		return result;
+	};
+
+	var FirstGroupArray = function(){		
+		var result = [];
+		for(var i = 0; i < FirstGroup.length; i++){							
+			result.push(FirstGroup[i]);		
+		}
+		return result;
+	};
+
+	var SecondGroupArray = function(){		
+		var result = [];
+		for(var i = 0; i < SecondGroup.length; i++){							
+			result.push(SecondGroup[i]);		
+		}
+		return result;
+	};
+	
+	var ThirdGroupArray = function(){		
+		var result = [];
+		for(var i = 0; i < ThirdGroup.length; i++){							
+			result.push(ThirdGroup[i]);		
+		}
+		return result;
+	};
+
+	return {
+		PrintGroupsArray : PrintGroupsArray,
+		searchByName : searchByName,
+		FirstGroupArray : FirstGroupArray,
+		SecondGroupArray : SecondGroupArray,
+		ThirdGroupArray : ThirdGroupArray
+	}
 }) ();
