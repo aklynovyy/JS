@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="portfolio site" />
+	<meta name="keywords" content="portfolio, site, dev, slicing" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+
+	<title>js</title>
+</head>
+<body>	
+	<div class="page-header">
+	  <div class="container">
+	  	<h1>Weather Statistics</h1>
+		</div>
+	</div>
+
+  <div class="container">
+    <h2>Search maximum value</h2>
+    <select id="select-param">
+      <option value="">Select option</option>
+      <option value="maxTemp">Maximum Temperature</option>
+      <option value="maxHum">Maximum Tumidity</option>
+      <option value="maxWF">Maximum wind Force</option>
+    </select>
+    <button class="btn btn-info" onclick="search()">Search</button>
+    <button class="btn btn-warning" onclick="globalStatistic()">Statistic</button>
+    <h3 id="param-description"></h3> 
+    <div id="total-table"></div>
+    <h4 id="total-statistic"></h4>
+  </div>
+</body>
+</html>
