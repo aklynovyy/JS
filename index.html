@@ -10,53 +10,390 @@
 <body>
 		<script type="text/javascript">
 			// Example 1
+
 			// for (var i = 10; i < 20; ++i) {
 			// 	console.log(i*i);
 			// }
 
 			// Example 2
+
 			// var n = Number(prompt("Enter number"));
 			// var summa = 1;
+
 			// for (var i = 1; i < n; ++i) {
 			// 	summa += i;
 			// }
 			// document.write(summa);
 
 			// Example 3
+
 			// var n = Number(prompt("Enter number"));
 			// var summa = 1;
+
 			// for (var i = 1; i < n; ++i) {
 			// 	summa *= i;
 			// }
 			// document.write(summa);
 
 			// Example 4
-			var arr = [];
-			var num = 0;
-			var x1 = 0, 
-					x2 = 0,
-					x3 = 0;
-			while (num = Number(prompt("Enter numbers"))) {
-				if (num === "q") {
-					break;
-				}
-				arr.push(num);
-			}
-			for (var i = 0; i < arr.length; ++i) {
-				if (arr[i] < 0) ++x1;
-				if (arr[i] > 0) ++x2;
-				if (arr[i] == 0) ++x3;
-			}
-			document.write(x1 +  "<0   " + x2 + ">0   " + x3 + "=0  ");
+
+			// var arr = [];
+			// var num = 0;
+			// var x1 = 0, 
+			// 		x2 = 0,
+			// 		x3 = 0;
+
+			// while (num = Number(prompt("Enter numbers"))) {
+			// 	if (num === "q") {
+			// 		arr.push(num);
+			// 	}
+			// }
+
+			// for (var i = 0; i < arr.length; ++i) {
+			// 	if (arr[i] < 0) ++x1;
+			// 	if (arr[i] > 0) ++x2;
+			// 	if (arr[i] == 0) ++x3;
+			// }
+			// document.write(x1 + "<0" + x2 + ">0" + x3 + "=0");
 
 			// Example 5
-			// function convertUnits (koeficient, units) {
-			// 	var arr = [];
-			// 	for (var i = 1; i < 10; ++i) {
 
+			// var n = parseInt(prompt("Enter value 1-10"));
+			// var koefArr = [2.1366, 2.5, 0.3048, 3.7325, 29.86, 0.40951, 0.7112, 4.2657, 25.3995];
+			// var i;
+
+			// for (i = 1; i <= 10; ++i) {
+			// 	document.write(koefArr[n] * i + '<br />');
+			// }
+
+			// Example 6
+
+			// var s = parseInt(prompt("Enter summ"));
+			// var n = parseInt(prompt("Enter years"));
+			// var percent = 0.03;
+
+			// for (i = 1; i <= n; ++i) {
+			// 	s += s * percent;
+			// 	console.log(s);
+			// }
+
+			// document.write(s);
+
+			// Example 7
+
+			// var numbArr = [];
+			// var number = 0;
+
+			// for(var i = 0; i < 20; ++i){
+			// 	number = prompt("Enter nambers");
+			// 	numbArr.push(parseInt(number));
+			// }
+
+			// for(var i = 0; i < 20; i += 2){
+
+			// 	if(numbArr[i] > numbArr[i + 1]){
+			// 		document.write(numbArr[i] + " > " + numbArr[i + 1] + "<br />");
+			// 	}	else {
+			// 		document.write(numbArr[i] + " < " + numbArr[i + 1] + "<br />");
 			// 	}
 
 			// }
+
+			// Example 8
+
+			// for (var i = 20; i <= 50; ++i) {
+
+			// 	if (i % 3 == 0 && i % 5 !== 0) {
+			// 		document.write(i + "<br />");
+			// 	} 
+			// }
+
+			// Example 9
+
+			// for (var i = 35; i < 87; ++i) {
+
+			// 	if (i % 7 == 1 || i % 7 == 2 || i % 7 == 5) {
+			// 		console.log(i);
+			// 	} 
+			// }
+
+			// Example 10
+
+			// var summa = 1
+
+			// for (var i = 1; i < 50; ++i) {
+
+			// 	if (i % 5 == 0 || i % 7 == 0) {
+			// 		summa =+ i;
+			// 	} 
+
+			// 	console.log(summa);
+			// }
+
+			// Example 11
+
+			// for (var i = 10; i < 100; ++i) {
+
+			// 	if (i % 4 == 0 && i % 6 !== 0) {
+			// 		console.log(i);
+			// 	} 
+			// }
+
+			// Example 12
+
+			// for (var i = 10; i < 100; ++i) {
+
+			// 	if (i % 2 !== 0 && i % 13 == 0) {
+			// 		console.log(i);
+			// 	} 
+			// }
+
+			// Example 13
+
+			// var summa = 0;
+
+			// for (var i = 100; i < 200; ++i) {
+
+			// 	if (i % 17 == 0) {
+			// 		summa += i;
+			// 	}
+			// }
+			// console.log(summa);
+
+			// Example 14
+
+			// var number = prompt("Enter an integer"),
+			// 		summa = 0;
+
+			// for (var i = 1; i < number; ++i) {
+			// 	summa =+ i * i;
+			// }
+			// console.log(summa);
+
+			// Example 15
+
+			// var a = prompt("Enter first number"),
+			// 	 	b = prompt("Enter second number"), 
+			// 		anb = Math.pow(a, b);;
+
+			// if ((a % parseInt(a) > 0) && (b < 0)) {
+			// 	alert("Enter a value greater than 0");
+			// } 
+			// console.log(anb);
+
+			// Example 16
+
+			// var quantityMachine = parseInt(prompt("Enter Quantity Machines")),
+			// 		machineHours = parseInt(prompt("Enter Machine Hours")),
+			// 		personHours = 0;
+
+			// for (var i = 0; i < quantityMachine; ++i) {
+			// 	personHours += (machineHours + 10);
+			// }
+			// console.log(personHours + " minutes ");
+
+			// Example 17
+
+			// var quantityPupils = parseInt(prompt("Enter Quantity Pupils")),
+			// 		pupilsArr = [],
+			// 		quantity = 0,
+			// 		average = 0;		
+
+			// for(var i = 0; i < quantityPupils; ++i){	
+			// 	quantity = prompt("Enter Pupil height");
+			// 	pupilsArr.push(parseInt(quantity));				
+			// }
+
+			// for(var i = 0; i < quantityPupils; ++i){	
+			// 	console.log(pupilsArr[i] + " sm");
+			// 	average += (pupilsArr[i] / quantityPupils);
+			// }
+			// console.log("Average Value " + average + " sm");
+
+			// Example 18
+
+			// var number = parseInt(prompt("Enter number")),
+			// 		newNumber = [];
+			// for (var i = 0; i < number ; i++){
+				
+			// 	if ((i % 2 > 1) || (i % 3 > 1) || (i % 5 > 1)){
+			// 		newNumber.push(i);
+			// 	}
+			// }
+			// console.log(newNumber);
+
+			// Example 19
+
+			// var summ = 0;
+
+			// for (var i = 10; i < 100; ++i) {
+
+			// 	for (var j = 10; j < 100; ++j) {
+			// 		summ = i + "" + j;
+
+			// 		if(parseInt(summ) % (i * j) == 0){
+			// 			console.log(j + " " + i);
+			// 		}
+			// 	}
+			// }
+
+			// Example 20
+
+			// var firstDigits = 10,
+			// 		secondDigits = 10;
+
+			// for (var i = 10; i < 100; ++i) {
+
+			// 	for (var j = 10; j < 100; ++j) {
+			// 		firstDigits = parseInt(i + "" + j);
+			// 		secondDigits = parseInt(j + "" + i);
+
+			// 		if ((firstDigits % 99 == 0) && (secondDigits % 49 == 0)) {
+			// 			console.log(firstDigits + " and " + secondDigits);
+			// 		}
+			// 	}
+			// }
+
+			// Example 21
+
+			// var number = parseInt(prompt("Enter number")),
+			// 		res = 0;
+
+			// for (var i = 1; i < number; ++i) {
+			// 	res += 1 / ( 2 * Math.pow(i, 2));
+			// }
+			// console.log(res);
+
+			// Example 21
+
+			// var number = parseInt(prompt("Enter number")),
+			// 		res = 1;
+
+			// for (var i = 1; i < number; ++i) {
+			// 	res += 1 / i;
+			// }
+			// console.log(res);
+
+			// Example 22
+
+			// var number = parseInt(prompt("Enter number")),
+			// 		res = 1;
+
+			// for (var i = 1; i < number; ++i) {
+			// 	res += 1 / i;
+			// }
+			// console.log(res);
+
+			// Example 23
+
+			// var res = 1;		
+
+			// for(var i = 1; i <= 10; i++){						
+			// 	res += Math.pow(2, i);						
+			// }
+			// console.log(" 1+2+4+8+...2v10 = " + res);
+
+			// Example 24
+
+			// var res = 1,
+			// 		mult = 1;
+
+			// for (var i = 2; i < 11; i++){
+			// 	res += i;
+			// 	mult *= res;
+			// }
+			// console.log(mult);
+
+			// Example 25
+
+			// var numA = parseFloat(prompt("Enter firs number")),
+			// 		numN = parseInt(prompt("Enter second number")),
+			// 		res = numA * (numA + 1);
+			// for (var i = 2; i < numN; i++){
+			// 	res *= (numA + i);
+			// }
+			// console.log(res);
+
+			// Example 26
+
+			// var numA = parseFloat(prompt("Enter firs number")),
+			// 		numN = parseInt(prompt("Enter second number")),
+			// 		res = 0;
+	
+			// for (var i = 1; i < numN + 1; i++){
+			// 	var sin = Math.pow(numA, i);
+			// 	res += Math.sin(sin);
+			// }
+			// console.log(res);
+
+			// Example 27
+
+			// var money = parseFloat(prompt("Enter money")),
+			// 		price = parseFloat(prompt("Enter price")),
+			// 		res = 0;
+
+			// while (money > price){
+			// 	money -= price;
+			// 	res++;
+			// }
+			// console.log('Peter bought ' + res + ' ice creams and the balance of money is ' + money + ' rouble.');
+
+			// Example 28
+
+			// var money = parseFloat(prompt("Enter credit money")),
+			// 		debt = parseFloat(prompt("Enter maximum debt")),
+			// 		years = 0;
+				
+			// while (money < debt){
+			// 	money *= 1.2;
+			// 	years++;
+			// }
+			// сonsole.log('In ' + years + ' years you`ll reach the maximum debt');
+
+			// Example 29
+
+			// var numbers = 100,
+			// 		pairs = new Array;
+
+			// while (numbers){
+
+			// 	if (numbers % 2 === 0){
+			// 		pairs.push(numbers);
+			// 	}
+			// 	numbers--;
+			// }
+			// pairs.reverse();
+			// console.log(pairs);
+
+			// Example 30
+
+			// var numbers = 100,
+			// 		pairs = new Array;
+
+			// while (numbers){
+
+			// 	if (numbers % 2 !== 0){
+			// 		pairs.push(numbers);
+			// 	}
+			// 	numbers--;
+			// }
+			// pairs.reverse();
+			// console.log(pairs);
+
+			// Example 31
+			// var fabric = parseFloat(prompt('Enter the lenght of fabric')),
+			// 		count = 0,
+			// 		piece = 10;
+
+			// while (fabric >= piece){
+			// 	fabric -= piece;
+			// 	count++;
+			// }
+
+			// if (fabric === 0){
+			// 	return (alert('There is no fabric. You have used ' + count + ' picese (10 meters each).'));
+			// }
+			// console.log('You have used ' + count + ' pieces of fabric. It has left ' + fabric + ' meters.');
 
 
 	</script>
