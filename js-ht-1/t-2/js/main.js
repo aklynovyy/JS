@@ -47,11 +47,13 @@ function globalStatistic(){
 		+ "<td>" + statiscitArray[i].averHum +"</td>" 
 		+ "<td>" + statiscitArray[i].averWF + "</td>" + "</tr>";
 	}			
-	paramStat = "<h3>Total Statistic:</h3><ul><li>Average Temperature: " 
-	+ totalAverTemp +"C</li><li>Average Humidity: " + totalAverHum 
-	+ "</li><li>Average Wind Force: " + totalAverWF +"</li></ul>";
-	$("#total-table").html(globStat);
-	$("#total-statistic").html(paramStat);
+	globStat += "</table>"
+	paramStat = "<h3>Total Statistic:</h3>"
+		+ "<ul><li>Average Temperature: " + totalAverTemp + "C</li>"
+		+ "<li>Average Humidity: " + totalAverHum	+ "</li>"
+		+ "<li>Average Wind Force: " + totalAverWF +"</li></ul>";
+		$("#total-table").html(globStat);
+		$("#total-statistic").html(paramStat);
 }
 
 function serachParam(param){
@@ -113,11 +115,15 @@ function search(){
 	var param = $("#select-param").val();
 	var searchArray = serachParam(param);
 	if (param == "maxTemp") {
-		var sP = "The maximum temperature in " + searchArray.city + " " + searchArray.day + " january: " + searchArray.maxParam + "C";
+		var serachParamItem = "The maximum temperature in " 
+		+ searchArray.city + " " + searchArray.day + " january: " + searchArray.maxParam + "C";
 	} else if (param == "maxHum") {
-		var sP = "Maximum humidity in " + searchArray.city + " " + searchArray.day + " january: " + searchArray.maxParam;
+		var serachParamItem = "Maximum humidity in " 
+		+ searchArray.city + " " + searchArray.day + " january: " + searchArray.maxParam;
 	}  else if (param == "maxWF") {
-		var sP = "The maximum wind force in " + searchArray.city + " " + searchArray.day + " january: " + searchArray.maxParam;
-	}			
-	$("#param-description").html(sP);
+		var serachParamItem = "The maximum wind force in " 
+		+ searchArray.city + " " + searchArray.day + " january: " + searchArray.maxParam;
+	}	
+
+	$("#param-description").html(serachParamItem);
 }

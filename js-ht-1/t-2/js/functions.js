@@ -74,4 +74,4 @@ for (var j = 0; j < citiesArray.length; j++) {
 		});					
 	}
 }
-// console.log(dataArray);
+console.log(dataArray);
